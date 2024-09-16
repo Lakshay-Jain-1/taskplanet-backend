@@ -1,7 +1,10 @@
 
 import express from "express"
-import TaskRoute from "./routes/TaskRoute"
-import Connection from "./db/database"
+import TaskRoute from "./routes/TaskRoute.js"
+import Connection from "./db/database.js"
+import { configDotenv } from "dotenv"
+
+configDotenv()
 const app = express()
 
 app.use("/api/tasks", TaskRoute)
