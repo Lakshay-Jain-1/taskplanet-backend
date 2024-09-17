@@ -12,12 +12,12 @@ const creatingATask=async(req,res)=>{
   }
 
   const updateATask=async(req,res)=>{
-    const data =   await TaskModel.find({})
+    const data =   await TaskModel.findOneAndUpdate({})
     res.status(200).json({message:"Successfully updated the task "})
   }
   
   const deleteATask=async(req,res)=>{
-    const data =   await TaskModel.find({})
+    const data =   await TaskModel.findOneAndDelete({})
     res.status(200).json({message:"Successfully deleted the task "})
   }
   
