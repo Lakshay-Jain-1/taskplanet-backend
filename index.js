@@ -3,6 +3,7 @@ import TaskRoute from "./routes/TaskRoute.js"
 import Connection from "./db/database.js"
 import { configDotenv } from "dotenv"
 import cors from "cors"
+import AdminRoute from "./routes/AdminRoute.js"
 configDotenv()
 const app = express()
 
@@ -15,6 +16,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json())
 app.use("/api/tasks", TaskRoute)
+app.use("/admin",AdminRoute)
 
 
 const portNumber = process.env.PORT_NUMBER||5000
