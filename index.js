@@ -8,7 +8,7 @@ configDotenv()
 const app = express()
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://polling-frontend-97zb.onrender.com" ,"http://localhost:5174"],
+  origin: ["http://localhost:5173", "https://full-stack-internship-task-3-w-front-end.vercel.app" ,"http://localhost:5174"],
   optionsSuccessStatus: 200,
   credentials:true
 };
