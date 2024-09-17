@@ -6,13 +6,13 @@ import cors from "cors"
 configDotenv()
 const app = express()
 
-let corsOptions = {
-    origin: ['http://localhost:1573'],
-    optionsSuccessStatus: 200 
-  }
-   
+const corsOptions = {
+  origin: ["http://localhost:5173", "https://polling-frontend-97zb.onrender.com" ,"http://localhost:5174"],
+  optionsSuccessStatus: 200,
+  credentials:true
+};
 
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use("/api/tasks", TaskRoute)
 
